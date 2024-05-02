@@ -72,7 +72,6 @@ async function run() {
       if (req.query?.category) {
         query = { category: req.query.category };
       }
-
       const result = await booksCollection.find(query).toArray();
       res.send(result);
     });
